@@ -1,5 +1,7 @@
 package com.jeanchampemont.demo.dependency_injection.service.impl;
 
+import javax.inject.Inject;
+
 import com.jeanchampemont.demo.dependency_injection.service.BarService;
 import com.jeanchampemont.demo.dependency_injection.service.FooBarService;
 import com.jeanchampemont.demo.dependency_injection.service.FooService;
@@ -7,6 +9,7 @@ import com.jeanchampemont.demo.dependency_injection.service.StringJoinerService;
 
 public class FooBarServiceImpl implements FooBarService {
 	
+	@Inject
 	public FooBarServiceImpl(FooService foo, BarService bar, StringJoinerService joiner) {
 		this.foo = foo;
 		this.bar = bar;
