@@ -1,12 +1,18 @@
 package com.jeanchampemont.demo.dependency_injection.service.impl;
 
+import javax.inject.Inject;
+
+import org.springframework.stereotype.Service;
+
 import com.jeanchampemont.demo.dependency_injection.service.BarService;
 import com.jeanchampemont.demo.dependency_injection.service.FooBarService;
 import com.jeanchampemont.demo.dependency_injection.service.FooService;
 import com.jeanchampemont.demo.dependency_injection.service.StringJoinerService;
 
+@Service
 public class FooBarServiceImpl implements FooBarService {
 	
+	@Inject
 	public FooBarServiceImpl(FooService foo, BarService bar, StringJoinerService joiner) {
 		this.foo = foo;
 		this.bar = bar;
